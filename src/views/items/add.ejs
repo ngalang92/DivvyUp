@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+      <% include ../static/partials/messages.ejs %>
+      <h1>Add Item</h1>
+
+      <form action="/items/create" method="post">
+        <div class="form-group">
+          <br>
+          <input type="text" class="form-control" name="name" aria-describedby="nameHelp" placeholder="Enter Item Name">
+          <small class="text-muted" id="nameHelp">Name must be 2 or more characters in length.</small>
+        </div>
+        <h2> Priority </h2>
+        <div>
+         <br>
+          <select name="priority">
+            <option value="Very High">Very High</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <br></br>
+        <h2> Budget </h2>
+        <div class="form-group">
+          <br>
+          <input type="number" step="0.01" class="form-control" name="budget" aria-describedby="nameHelp" placeholder="You must enter a budget value">
+        </div>
+        <br></br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <% include ./partials/head.ejs %>
+  </head>
+  <body>
+
+      <!-- Navigation -->
+     <% include ./partials/navbar.ejs %>
+
+      <!-- Page Content -->
+      <main class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+          <h1 class="display-3">Welcome to DivvyUp</h1>
+          <p class="lead">An application for users to share realtime grocery lists.</p>
+          <br>
+          <a href="/users/sign_up" class="btn btn-primary btn-lg">Sign up</a>
+        </header>
+
+        <!-- Page Features -->
+        <section class="row text-center">
+
+          <section class="col-lg-4">
+            <img src="../images/shop.png" alt="shop" height="50" width="50"></img>
+            <h4 class="card-title">Shop</h4>
+            <p class="card-text">Share your lists with others to finish shopping faster!</p>
+          </section>
+
+          <section class="col-lg-4">
+            <img src="../images/prioritize.png" alt="prioritize" height="50" width="50"></img>
+            <h4 class="card-title">Prioritize </h4>
+            <p class="card-text">Remember the most important items you need now!</p>
+          </section>
+
+          <section class="col-lg-4">
+            <img src="../images/budget.png" alt="budget" height="50" width="50"></img>
+            <h4 class="card-title">Budget</h4>
+            <p class="card-text">Save money by setting expenditure limits!</p>
+          </section>
+
+        </section>
+        <!-- /.row -->
+
+      </main>
+      <!-- /.container -->
+
+      <% include ./partials/baseScripts.ejs %>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+     <main class="container">
+       <h1>Are you sure you want to delete item?</h1>
+       <form action="/items/<%= item.id %>/<%= item.name %>/destroy" style="display:initial" method="post">
+         <button type="submit" class="btn btn-danger">Delete</button>
+       </form>
+        <a href="/items" class="btn btn-primary">Cancel</a>
+    </main>
+     <% include ../static/partials/baseScripts.ejs %>
+   </body>
+</html>

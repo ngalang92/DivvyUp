@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <main class="container">
+      <% include ../static/partials/navbar.ejs %>
+       <h1>Items</h1>
+       <br>
+       <% if(!currentUser) { %>
+         <small>Please sign up/sign in to add and view your items.</small>
+       <% } %>
+       <% if(currentUser) { %>
+         <a href="/items/add" class="btn btn-success">Add Item</a>
+      <br> </br>
+      <ul class="list-group">
+        <% items.forEach((item) => { %>  <!-- itemsData is coming from itemController.index/PSQL-->
+            <li class="list-group-item">
+              <b>Name:</b>
+              <a href="/items/<%= item.id %>/<%= item.name %>"> <%= item.name %> </a>
+              <br>
+              <small> (Click to edit) </small>
+              <br></br>
+              <section id="mark-form">
+                <b>Priority:</b>
+                 <p><%= item.priority %></p>
+                 <br> </br>
+                <b>Max Budget:</b>
+                 <p>$<%= item.budget %></p>
+                <br> </br>
+                 <p><% include ../marks/marking.ejs %></p>
+              </section>
+
+            </li>
+        <% }) %>
+      </ul>
+      <% } %>
+
+     </main>
+  </body>
+</html>
