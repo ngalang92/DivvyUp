@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "nicks",
+    "password": null,
+    "database": "divvyup",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false,
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "nicks",
+    "password": null,
+    "database": "divvyup_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false,
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "divvyup_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "db": "process.env.DATABASE_URL",
+    "use_env_variable": "DATABASE_URL"
+  }
+}

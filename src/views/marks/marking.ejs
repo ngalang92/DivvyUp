@@ -1,0 +1,24 @@
+
+<div class="pull-left" style="width: 40px;text-align: center;">
+
+<% let marks = item.dataValues.marks %>
+  <% if(marks[0].dataValues.value === true) { %>
+  <div>
+    <b> Status: </b> <p> Purchased </p>
+    <br> </br>
+    <b>Unmark as purchased:</b>
+    <a href="/items/<%= item.id %>/marks/downmark">
+      <img src="../images/complete.png" alt="complete" height="45" width="45"></img>
+    </a>
+  </div>
+  <% } else { %>
+  <div>
+    <b> Status:</b><p> Unpurchased </p>
+    <br> </br>
+    <b>Mark as purchased:</b>
+    <a href="/items/<%= item.id %>/marks/upmark">
+      <img src="../images/incomplete.png" alt="incomplete" height="40" width="40"></img>
+    </a>
+  </div>
+  <% } %>
+</div>
